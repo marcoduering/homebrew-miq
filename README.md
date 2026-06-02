@@ -7,5 +7,6 @@ To install MIQ via Homebrew run in macOS Terminal (after installing Homebrew):
 
 ```bash
 brew tap marcoduering/miq
+brew trust --cask marcoduering/miq/miq
 brew install --cask miq
 ```
