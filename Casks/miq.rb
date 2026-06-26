@@ -1,6 +1,6 @@
 cask "miq" do
-  version "1.1.0"
-  sha256 "d56902664ee8ea7825d54e3541d9baa94c34105a85ee89236dd363a5bcf53b91"
+  version "1.2.0"
+  sha256 "c035fa8deb4e0a074ae1f934967ba33727b1165499ad78f2b02306b6f12bcfd4"
 
   url "https://github.com/marcoduering/MIQ/releases/download/v#{version}/MIQ.app.zip"
   name "MIQ"
