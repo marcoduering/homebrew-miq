@@ -1,6 +1,6 @@
 cask "miq" do
-  version "1.3.0"
-  sha256 "c8dfd1800c9e3353b32c376d081b3cc8eb6c93924288f63aa56d9380e877b558"
+  version "1.4.0"
+  sha256 "79c54c42aec303da307ba5d5da5b60aa8354ba62109053c3cbacb3086436eff6"
 
   url "https://github.com/marcoduering/MIQ/releases/download/v#{version}/MIQ.app.zip"
   name "MIQ"
@@ -11,6 +11,11 @@ cask "miq" do
     url :url
     strategy :github_latest
   end
+
+  # MIQ updates itself via Sparkle from 1.4.0 on. Tells `brew upgrade` to leave
+  # it alone unless --greedy is passed, so the tap never downgrades a
+  # self-updated app.
+  auto_updates true
 
   depends_on macos: :sonoma
 
