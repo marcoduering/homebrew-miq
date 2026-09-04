@@ -4,7 +4,15 @@ cask "miq" do
 
   url "https://github.com/marcoduering/MIQ/releases/download/v#{version}/MIQ.app.zip"
   name "MIQ"
-  desc "A Quick Look extension for medical image files in popular research formats"
+  desc "Quick Look extension for medical image files in popular research formats"
   homepage "https://github.com/marcoduering/MIQ"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
+  depends_on macos: ">= :sonoma"
+
   app "MIQ.app"
 end
